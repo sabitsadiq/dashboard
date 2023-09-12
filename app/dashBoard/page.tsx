@@ -24,7 +24,7 @@ const DashBoard = () => {
       console.log("empty");
       return;
     }
-    console.log(todo);
+    // console.log(todo);
     const newtask = { task: todo };
     setTodoList([...todoList, newtask]);
     console.log(todoList);
@@ -33,11 +33,19 @@ const DashBoard = () => {
   };
   // Retrieve with if statement the the data is available(todoList data)
   useEffect(() => {
-    const retrieveTodoList = JSON.parse(
-      localStorage.getItem(LOCAL_STORAGE_KEY) || ""
-    );
-    if (retrieveTodoList) setTodoList(retrieveTodoList);
-    console.log(retrieveTodoList);
+    // const retrieveTodoList = JSON.parse(
+    //   localStorage.getItem(LOCAL_STORAGE_KEY)
+    // );
+    const storeTodoList = localStorage.getItem(LOCAL_STORAGE_KEY);
+    if (storeTodoList) {
+      const parseItem = JSON.parse(storeTodoList);
+      console.log(parseItem);
+      setTodoList(parseItem);
+    } else {
+      console.log("no parse item exit");
+    }
+    // if (retrieveTodoList) setTodoList(retrieveTodoList);
+    // console.log(retrieveTodoList);
   }, []);
   // store Todo to Local storage
   useEffect(() => {

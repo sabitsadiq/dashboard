@@ -16,7 +16,7 @@ const AuthLayout = ({ children }: AuthLayoutProps) => {
   };
   return (
     <ErrorBoundary fallback={<div>Something Went Wrong</div>}>
-      <main className=" w-full bg-gray-200/40 max-w-[1400px]">
+      <main className=" w-full bg-gray-100/100 max-w-[1400px]">
         <div>
           <AuthNav onToggleNav={handleSidebarToggle} />
         </div>

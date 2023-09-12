@@ -8,7 +8,7 @@ interface navProp {
 
 const AuthNav = ({ onToggleNav }: navProp) => {
   return (
-    <nav className="bg-white fixed h-18 shadow-lg w-full md:px-10 py-3">
+    <nav className="bg-white fixed z-40 h-18 shadow-lg w-full md:px-10 py-3">
       <div className="flex items-center justify-between px-2  w- mx-au max-w-[1400px]">
         <div>
           <HiOutlineMenuAlt1

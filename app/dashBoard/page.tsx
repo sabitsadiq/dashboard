@@ -31,18 +31,19 @@ const DashBoard = () => {
     setTodo("");
     setOpenModal(false);
   };
+  // Retrieve with if statement the the data is available(todoList data)
+  useEffect(() => {
+    const retrieveTodoList = JSON.parse(
+      localStorage.getItem(LOCAL_STORAGE_KEY) || ""
+    );
+    if (retrieveTodoList) setTodoList(retrieveTodoList);
+    console.log(retrieveTodoList);
+  }, []);
   // store Todo to Local storage
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todoList));
   }, [todoList]);
 
-  // Retrieve with if statement the the data is available(todoList data)
-  // useEffect(() => {
-  //   const retrieveTodoList = JSON.parse(
-  //     localStorage.getItem(LOCAL_STORAGE_KEY) || ""
-  //   );
-  //   if (retrieveTodoList) setTodoList(retrieveTodoList);
-  // }, []);
   // Delete task
   const deleteTask = (selectedTask: string): void => {
     setTodoList(

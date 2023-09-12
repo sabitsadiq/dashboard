@@ -35,19 +35,19 @@ export const Card2 = () => {
             </p>
             <div className="flex items-center gap-1">
               <HiOutlineCheckCircle size={25} />
-              <p className="text-base lg:text-lg font-normal leading-3">
+              <p className="text-base font-normal leading-3">
                 Convert html to React app
               </p>
             </div>
             <div className="flex items-center gap-1 py-1">
               <HiOutlineCheckCircle size={25} />
-              <p className="text-base lg:text-lg  font-normal leading-3">
+              <p className="text-base font-normal leading-3">
                 Create Node.js app
               </p>
             </div>
             <div className="flex items-center gap-1">
               <MdOutlineRadioButtonUnchecked size={25} />
-              <p className="text-base lg:text-lg font-normal leading-3">
+              <p className="text-base font-normal leading-3">
                 Upload to Github
               </p>
             </div>
